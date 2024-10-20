@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Lagu Favorit - Formulir Rekomendasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <h1>Formulir Rekomendasi Lagu Favorit Kalian</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Sidebar -->
+    <nav class="container sidebar">
+        <ul>
+            <li><a href="index.html">Halaman Utama</a></li>
+            <li><a href="formulir.html" class="active">Halaman Formulir</a></li>
+            <li><a href="tabel.html">Daftar Lagu</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <section class="form-section">
+                <h2>Rekomendasikan Lagu Favorit Kalian</h2>
+                <form action="tabel.html" method="get">
+                    <!-- Form Group for Song Title -->
+                    <div class="form-group">
+                        <label for="song">Judul Lagu:</label>
+                        <input type="text" id="song" name="song" placeholder="Masukkan judul lagu" required>
+                    </div>
+
+                    <!-- Form Group for Singer Name -->
+                    <div class="form-group">
+                        <label for="singer">Penyanyi:</label>
+                        <input type="text" id="singer" name="singer" placeholder="Masukkan nama penyanyi" required>
+                    </div>
+
+                    <!-- Form Group for Date of Release -->
+                    <div class="form-group">
+                        <label for="release">Tanggal Rilis:</label>
+                        <input type="date" id="release" name="release" required>
+                    </div>
+
+                    <!-- Form Group for Song Genre (Radio Buttons) -->
+                    <fieldset class="form-group">
+                        <legend>Genre Lagu:</legend>
+                        <label for="pop">
+                            <input type="radio" id="pop" name="genre" value="Pop" checked required> Pop
+                        </label>
+                        <label for="rock">
+                            <input type="radio" id="rock" name="genre" value="Rock" required> Rock
+                        </label>
+                        <label for="jazz">
+                            <input type="radio" id="jazz" name="genre" value="Jazz" required> Jazz
+                        </label>
+                    </fieldset>
+
+                    <!-- Form Group for Nationality (Dropdown Field) -->
+                    <div class="form-group">
+                        <label for="nationality">Negara Asal Penyanyi:</label>
+                        <select id="nationality" name="nationality" required>
+                            <option value="">Pilih Negara</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Singapura">Singapura</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Group for Description (Textarea Field) -->
+                    <div class="form-group">
+                        <label for="description">Deskripsi Singkat Tentang Lagu:</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Tuliskan sedikit deskripsi tentang lagu ini" required></textarea>
+                    </div>
+
+                    <!-- Checkbox for Subscription -->
+                    <div class="form-group">
+                        <label for="subscribe">
+                            <input type="checkbox" id="subscribe" name="subscribe"> Subscribe
+                        </label>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Anda:</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Kata Sandi:</label>
+                        <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" pattern=".{6,}" title="Kata sandi harus minimal 6 karakter" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Kirim Rekomendasi</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Website Lagu Favorit. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
